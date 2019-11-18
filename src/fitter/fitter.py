@@ -191,7 +191,7 @@ class Fitter(object):
             >>> fitter.Fitter(data).hist()
 
         """
-        _ = pylab.hist(self._data, bins=self.bins, density=True)
+        _ = pylab.hist(self._data, bins=self.bins, density=False)
         pylab.grid(True)
 
     def fit(self):
