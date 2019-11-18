@@ -141,7 +141,7 @@ class Fitter(object):
 
     def _update_data_pdf(self):
         # histogram retuns X with N+1 values. So, we rearrange the X output into only N
-        self.y, self.x = np.histogram(self._data, bins=self.bins, density=True) # not to show
+        self.y, self.x = np.histogram(self._data, bins=self.bins, density=False) # not to show
         self.x = [(this+self.x[i+1])/2. for i,this in enumerate(self.x[0:-1])]
 
     def _trim_data(self):
